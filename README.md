@@ -15,15 +15,15 @@ The purpose of this analysis is to develop a deep learning model to predict the 
 
     Feature Variable(s):
     * The features include the categorical and numerical variables that describe the donation applications:
-        APPLICATION_TYPE
-        AFFILIATION
-        CLASSIFICATION
-        USE_CASE
-        ORGANIZATION
-        STATUS
-        INCOME_AMT
-        SPECIAL_CONSIDERATIONS
-        ASK_AMT
+        * APPLICATION_TYPE
+        * AFFILIATION
+        * CLASSIFICATION
+        * USE_CASE
+        * ORGANIZATION
+        * STATUS
+        * INCOME_AMT
+        * SPECIAL_CONSIDERATIONS
+        * ASK_AMT
 
     Removed Variables:
     * The columns EIN and NAME were removed from the dataset as they are identification numbers that do not contribute meaningfully to the prediction of success or failure of an application.
@@ -33,11 +33,11 @@ The purpose of this analysis is to develop a deep learning model to predict the 
 
     Neurons, Layers, and Activation Functions:
     * Neurons:
-        The model started with 3 hidden layers. Across multiple optimization attempts, we adjusted the number of neurons in each layer. For the final attempt, we used:
-            100 neurons in the first layer
-            80 neurons in the second layer
-            50 neurons in the third layer
-            25 neurons in the fourth layer
+        The model started with 3 hidden layers. Across multiple optimization attempts, we adjusted the number of neurons in each layer. For the final attempt, neurons used:
+            * 100 neurons in the first layer
+            * 80 neurons in the second layer
+            * 50 neurons in the third layer
+            * 25 neurons in the fourth layer
     * Activation Functions:
         * The tanh activation function was used in the first layer to allow for both positive and negative outputs, followed by relu activation functions in subsequent layers to introduce non-linearity and handle vanishing gradients.
         * The output layer used a sigmoid activation function, as this is a binary classification task.
@@ -65,7 +65,6 @@ The deep learning model developed for Alphabet Soup achieved an accuracy of 72.7
 Recommendations for Future Work:
 Given that the deep learning model did not achieve the target accuracy, a different approach could be considered. One possible solution is to try ensemble learning methods, such as random forests or gradient boosting (e.g., XGBoost), which are often more effective for structured/tabular data like this.
 
-Why Random Forests or Gradient Boosting?
 These models are particularly good at handling imbalanced datasets, noise, and non-linear relationships, which could be present in this dataset.
 Ensemble methods combine the predictions of multiple models, often resulting in improved generalization and better overall performance.
 
